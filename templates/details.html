@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-center mb-4"></h2>
+<div class="text-center mb-3">
+  <a href="/category/{{ category_name }}" class="btn btn-secondary">⬅ Back to {{ category_name }}</a>
+</div>
+<div class="card shadow-sm p-3">
+  <div class="table-responsive">{{ table | safe }}</div>
+</div>
+{% endblock %}

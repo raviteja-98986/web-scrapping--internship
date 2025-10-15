@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-center mb-4">📊 Categories</h2>
+<div class="row justify-content-center">
+  {% for name, path in categories.items() %}
+  <div class="col-md-3">
+    <div class="card shadow-sm mb-4 text-center p-3">
+      <h4>{{ name }}</h4>
+      <a href="/category/{{ name }}" class="btn btn-primary mt-2">View {{ name }}</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

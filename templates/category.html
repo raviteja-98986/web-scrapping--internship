@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-center mb-4">{{ category_name }}</h2>
+
+{% if items %}
+  {% for item in items %}
+  <div class="card shadow-sm mb-4 p-3">
+    <div class="table-responsive">{{ item.summary | safe }}</div>
+    <a href="/detail/{{ category_name }}/{{ item.filename }}" class="btn btn-sm btn-outline-primary mt-2 m-auto p-autossss">View Details</a>
+  </div>
+  {% endfor %}
+{% else %}
+  <div class="alert alert-warning text-center">No data found for {{ category_name }}</div>
+{% endif %}
+{% endblock %}
